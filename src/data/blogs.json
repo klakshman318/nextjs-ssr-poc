@@ -1,0 +1,5 @@
+[
+    { "id": 1, "title": "Understanding React Suspense", "author": "John Doe" },
+    { "id": 2, "title": "A Guide to Tailwind CSS Animations", "author": "Jane Smith" },
+    { "id": 3, "title": "Server Components in Next.js 15", "author": "Michael Johnson" }
+]
