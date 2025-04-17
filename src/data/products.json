@@ -1,5 +1,32 @@
 [
-    { "id": 1, "name": "Product One", "price": "$29", "image": "https://via.placeholder.com/150" },
-    { "id": 2, "name": "Product Two", "price": "$49", "image": "https://via.placeholder.com/150" },
-    { "id": 3, "name": "Product Three", "price": "$99", "image": "https://via.placeholder.com/150" }
+    {
+        "id": 1,
+        "name": "Wireless Headphones",
+        "price": "$99",
+        "image": "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=150&q=150"
+    },
+    {
+        "id": 2,
+        "name": "Smartwatch Series 5",
+        "price": "$249",
+        "image": "https://images.unsplash.com/photo-1541140532154-b024d705b90a?auto=format&fit=crop&w=150&q=150"
+    },
+    {
+        "id": 3,
+        "name": "Gaming Mouse",
+        "price": "$49",
+        "image": "https://images.unsplash.com/photo-1605773527852-c546a8584ea3?auto=format&fit=crop&w=150&q=150"
+    },
+    {
+        "id": 4,
+        "name": "Mechanical Keyboard",
+        "price": "$129",
+        "image": "https://images.unsplash.com/photo-1595045051853-05ef47bdfdbe?auto=format&fit=crop&w=150&q=150"
+    },
+    {
+        "id": 5,
+        "name": "Portable Bluetooth Speaker",
+        "price": "$79",
+        "image": "https://images.unsplash.com/photo-1588131174159-7dd6c71a3e9d?auto=format&fit=crop&w=150&q=150"
+    }
 ]

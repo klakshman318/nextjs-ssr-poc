@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 
 const LoadingContext = createContext<{
     isLoading: boolean;
@@ -13,7 +13,11 @@ const LoadingContext = createContext<{
 });
 
 export function LoadingProvider({ children }: { children: React.ReactNode }) {
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        setIsLoading(false);
+    }, []);
 
     const startLoading = () => setIsLoading(true);
     const stopLoading = () => setIsLoading(false);

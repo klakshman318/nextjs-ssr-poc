@@ -1,8 +1,19 @@
-export default function HomePage() {
+import { GET as getUsers } from '@/app/api/users/route';
+import HomePage from '@/components/Home';
+import { User } from '@/types/user';
+
+type ApiResponse = {
+  results: User[];
+};
+
+export default async function Page() {
+  const res = await getUsers();
+  const { results } = (await res.json()) as ApiResponse;
+  const users = results;
+
   return (
-    <div className="text-center mt-20 space-y-6">
-      <h1 className="text-5xl font-extrabold text-indigo-600">Next.js SSR POC App</h1>
-      <p className="text-gray-600 text-lg">Navigate and see dynamic loading in action.</p>
+    <div className="container mx-auto px-4 py-6">
+      <HomePage />
     </div>
   );
 }
