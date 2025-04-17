@@ -1,6 +1,8 @@
 'use client';
 
-import dynamic from 'next/dynamic';
+import ProductCardSkeletonGrid from '@/components/skeletons/product/ProductCardSkeletonGrid';
+import BlogCardSkeletonGrid from '@/components/skeletons/blog/BlogCardSkeletonGrid';
+import UserCardSkeletonGrid from '@/components/skeletons/user/UserCardSkeletonGrid';
 
 type SkeletonLoaderProps = {
     pageType: string;
@@ -11,13 +13,13 @@ export default function SkeletonLoader({ pageType }: SkeletonLoaderProps) {
 
     switch (pageType) {
         case 'users':
-            SkeletonComponent = dynamic(() => import('@/components/skeletons/user/UserCardSkeletonGrid'));
+            SkeletonComponent = () => <UserCardSkeletonGrid />;
             break;
         case 'products':
-            SkeletonComponent = dynamic(() => import('@/components/skeletons/product/ProductCardSkeletonGrid'));
+            SkeletonComponent = () => <ProductCardSkeletonGrid />;
             break;
         case 'blogs':
-            SkeletonComponent = dynamic(() => import('@/components/skeletons/blog/BlogCardSkeletonGrid'));
+            SkeletonComponent = () => <BlogCardSkeletonGrid />;
             break;
         default:
             SkeletonComponent = () => <DefaultSpinner />;

@@ -8,19 +8,12 @@ type ApiResponse = {
 };
 
 export default async function AsyncContentLoader({ slug }: { slug?: string[] }) {
-    const pageType = slug?.[0] ?? 'home';
-
-    // let users: User[] | undefined = undefined;
-
-    // const res = await getUsers();
-    // const { results } = (await res.json()) as ApiResponse;
-    // users = results;
 
     const nextResponse = await getUsers();
     const { results }: ApiResponse = await nextResponse.json();
     
     return (
-        <DataProvider value={{ slug, users: results, isLoading: false }}>
+        <DataProvider value={{ slug, users: results }}>
             <LandingPage />
         </DataProvider>
     );

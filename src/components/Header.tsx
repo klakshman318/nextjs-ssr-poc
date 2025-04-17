@@ -16,7 +16,7 @@ const Header = memo(function Header() {
             label,
             isActive:
                 pathname === href ||
-                (href !== '/' && pathname.startsWith(href)), // for subpages
+                (href !== '/' && pathname.startsWith(href)),
         }));
     }, [pathname]);
 
@@ -32,7 +32,6 @@ const Header = memo(function Header() {
                         <Link
                             key={href}
                             href={href}
-                            prefetch={false} 
                             className={cn(
                                 'transition-all font-medium text-white hover:text-gray-200 relative group',
                                 isActive && 'after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:bg-white'

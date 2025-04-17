@@ -4,3 +4,7 @@ export type User = {
     email: string;
     picture: { large: string };
 };
+
+export type ApiResponse = {
+    results: User[];
+};
